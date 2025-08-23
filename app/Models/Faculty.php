@@ -11,6 +11,6 @@ class Faculty extends Model
     protected $fillable=['name'];
 public function teachers()
 {
-    return $this->hasMany(Teacher::class);
+    return $this->belongsToMany(Teacher::class, 'faculty_teachers');
 }
 }

@@ -22,7 +22,7 @@
                         <th class="py-3 px-4 border">ID</th>
                         <th class="py-3 px-4 border">Name</th>
                         <th class="py-3 px-4 border">Age</th>
-                        <th class="py-3 px-4 border">Faculty</th>
+                       
                         <th class="py-3 px-4 border">Actions</th>
                     </tr>
                 </thead>
@@ -32,7 +32,7 @@
                             <td class="py-2 px-4 border">{{ $teacher->id }}</td>
                             <td class="py-2 px-4 border">{{ $teacher->name }}</td>
                             <td class="py-2 px-4 border">{{ $teacher->age }}</td>
-                            <td class="py-2 px-4 border">{{ $teacher->faculty->name }}</td>
+
                             <td class="py-2 px-4 border">
                                 <a href="{{ route('teacher.edit', $teacher->id) }}" class="text-blue-600 hover:underline">Edit</a>
                                 <form action="{{ route('teacher.destroy', $teacher->id) }}" method="POST" class="inline">
