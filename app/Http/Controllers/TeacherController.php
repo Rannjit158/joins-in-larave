@@ -49,7 +49,10 @@ public function update(Request $request, $id)
        ]);
 
        $teacher = Teacher::findOrFail($id);
-       $teacher->update($request->only(['name', 'age']));
+       $teacher->update([
+           'name' => $request->name,
+           'age' => $request->age
+       ]);
 
        return redirect()->route('teacher.index')->with('success', 'Teacher updated successfully');
    }
