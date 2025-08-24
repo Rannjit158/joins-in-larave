@@ -20,17 +20,7 @@
                 @error('age') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
             </div>
 
-            <div>
-                <label class="block text-gray-700 font-medium">Faculty</label>
-                <select name="faculty_id" class="w-full p-2 border rounded" required>
-                    @foreach($faculties as $faculty)
-                        <option value="{{ $faculty->id }}" {{ $teacher->faculty_id == $faculty->id ? 'selected' : '' }}>
-                            {{ $faculty->name }}
-                        </option>
-                    @endforeach
-                </select>
-                @error('faculty_id') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
-            </div>
+            
 
             <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
                 Update

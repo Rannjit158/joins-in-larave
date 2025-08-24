@@ -12,7 +12,7 @@
         @endif
 
         <a href="{{ route('teacher.create') }}" class="mb-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-            + Add Teacher
+            Add Teacher
         </a>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
@@ -22,7 +22,7 @@
                         <th class="py-3 px-4 border">ID</th>
                         <th class="py-3 px-4 border">Name</th>
                         <th class="py-3 px-4 border">Age</th>
-                       
+
                         <th class="py-3 px-4 border">Actions</th>
                     </tr>
                 </thead>

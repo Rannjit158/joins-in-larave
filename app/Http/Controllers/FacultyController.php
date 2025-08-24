@@ -43,7 +43,7 @@ public function create()
             'name' => 'required|string|max:255',
         ]);
        $faculties=Faculty::findOrFail($id);
-       $faculties=Faculty::update([
+       $faculties->update([
         'name'=>$request->name,
        ]);
 
@@ -53,7 +53,7 @@ public function create()
     public function destroy($id)
     {
         $faculties=Faculty::findOrFail($id);
-        $faculties=Faculty->delete();
+        $faculties->delete();
         return redirect()->route('faculties.index')->with('success', 'Faculty deleted successfully');
     }
 }
